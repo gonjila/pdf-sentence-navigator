@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Sentence Navigator",
+  "version": "1.0.0",
+  "description": "Open a PDF in a local viewer and step through it sentence-by-sentence with Tab / Shift+Tab. Fully local, nothing is uploaded anywhere.",
+  "action": {
+    "default_title": "Open PDF Sentence Navigator"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+}
